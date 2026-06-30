@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soviet:block/slabs/concrete_slab_orange"
+    },
+    "type=double": {
+      "model": "soviet:block/concrete/concrete_orange"
+    },
+    "type=top": {
+      "model": "soviet:block/slabs/concrete_slab_orange_top"
+    }
+  }
+}

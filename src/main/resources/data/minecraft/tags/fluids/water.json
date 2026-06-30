@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "soviet:toxic_water_flowing",
+      "required": false
+    },
+    {
+      "id": "soviet:toxic_water_fluid",
+      "required": false
+    }
+  ]
+}
