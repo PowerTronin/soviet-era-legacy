@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "ru.tesmio.SovietMod"
+    ],
+    "client": [
+      "ru.tesmio.client.SovietClientMod"
     ]
   },
   "mixins": [

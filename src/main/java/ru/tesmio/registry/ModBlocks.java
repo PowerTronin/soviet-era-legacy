@@ -166,6 +166,12 @@ public final class ModBlocks {
         "structural/panel_tile"
     };
 
+    private static final String[] CERAMIC_GLASS_BLOCK_IDS = {
+        "structural/ceramic_glass_blue",
+        "structural/ceramic_glass_green",
+        "structural/ceramic_glass_brown"
+    };
+
     private static final String[] WOOD_BLOCK_IDS = {
         "structural/parquet_block",
         "structural/parquet_block_diagonal"
@@ -199,8 +205,13 @@ public final class ModBlocks {
         registerBlocks(LINO_BLOCK_IDS, ModBlocks::linoSettings);
         registerBlocks(STRUCTURAL_STONE_BLOCK_IDS, ModBlocks::tileSettings);
         registerBlocks(STRUCTURAL_PANEL_BLOCK_IDS, ModBlocks::brickSettings);
+        registerBlocks(CERAMIC_GLASS_BLOCK_IDS, ModBlocks::glassSettings);
         registerBlocks(WOOD_BLOCK_IDS, ModBlocks::woodSettings);
         registerBlocks(METAL_BLOCK_IDS, ModBlocks::metalSettings);
+    }
+
+    public static Block getBlock(String id) {
+        return BLOCKS.get(id);
     }
 
     public static Item getBlockItem(String id) {
@@ -279,6 +290,14 @@ public final class ModBlocks {
             .requiresTool()
             .strength(5.5F, 15.0F)
             .sounds(BlockSoundGroup.WOOD);
+    }
+
+    private static FabricBlockSettings glassSettings() {
+        return FabricBlockSettings.create()
+            .requiresTool()
+            .strength(1.0F, 2.0F)
+            .sounds(BlockSoundGroup.GLASS)
+            .nonOpaque();
     }
 
     private static FabricBlockSettings metalSettings() {

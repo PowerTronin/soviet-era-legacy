@@ -27,9 +27,10 @@ The project currently builds successfully with:
 - Fabric registration for the active item IDs from the old `RegItems`.
 - Temporary item registrations for model-only block item IDs until their blocks are ported.
 - Generated missing `models/item/*.json` files for texture-only items. The project now has 288 item model JSON files, including ported block item models.
-- Fabric registration for 114 simple full-cube blocks from `RegBlocks`:
-  concrete, bricks, horizontal/small/mosaic/quad/rest/regular tiles, lino, simple structural panels/trim blocks, parquet, metal blocks, and two cleaned metal blocks.
+- Fabric registration for 117 simple cube blocks from `RegBlocks`:
+  concrete, bricks, horizontal/small/mosaic/quad/rest/regular tiles, lino, simple structural panels/trim blocks, ceramic glass, parquet, metal blocks, and two cleaned metal blocks.
 - Fabric registration for 18 vanilla-geometry concrete stairs and slabs from `RegBlocks`.
+- Client render-layer registration for the three translucent ceramic glass blocks.
 - Generated full-cube blockstates, block models, and block item models for the registered full-cube block set.
 - Generated vanilla stairs/slab blockstates and models from Minecraft 1.20.1 templates for the concrete stairs/slabs.
 - Added Minecraft block tags for the registered full-cube blocks:
@@ -41,15 +42,15 @@ The project currently builds successfully with:
 - Made the parked `minecraft:water` fluid tag entries for unported toxic water optional, avoiding runtime missing-tag errors until fluids are ported.
 - Moved 46 custom `soviet:crusher` and `soviet:affinage` recipes to `src/legacy/resources` until their Fabric recipe serializers are ported.
 - Power Mine MCP `diagnose_mod_content` reports `0` issues and `0` warnings for the current jar:
-  1172 models, 437 blockstates, 464 textures, and 0 runtime recipes.
+  1178 models, 440 blockstates, 464 textures, and 0 runtime recipes.
 - Power Mine MCP `diagnose_mod` reports `0` issues and `0` warnings against the selected Fabric 1.20.1 profile.
-- Power Mine agent runtime smoke loaded the selected Fabric 1.20.1 profile, initialized `soviet` with 132 block registrations and 156 item registrations,
-  and verified `soviet:stairs/concrete_gray_stairs` held-item render plus `soviet:slabs/concrete_slab_gray` block render with `missingModel=false`.
+- Power Mine agent runtime smoke loaded the selected Fabric 1.20.1 profile, initialized `soviet` with 135 block registrations and 156 item registrations,
+  and verified `soviet:stairs/concrete_gray_stairs`, `soviet:slabs/concrete_slab_gray`, and `soviet:structural/ceramic_glass_blue` held/block render paths with `missingModel=false`.
 
 ## Not Migrated Yet
 
 - Forge `DeferredRegister` and `RegistryObject` registries.
-- Most complex blocks and block items from `RegBlocks`. The current Fabric registry covers simple full-cube blocks plus concrete stairs/slabs.
+- Most complex blocks and block items from `RegBlocks`. The current Fabric registry covers simple cube blocks, translucent ceramic glass, and concrete stairs/slabs.
 - `quadtile/tile_quad_6` is still skipped because the source resources do not include `textures/block/quadtile/tile_quad_6.png`.
 - Custom block classes, block states, and custom shapes.
 - Block entities, inventories, screen handlers, and screens.

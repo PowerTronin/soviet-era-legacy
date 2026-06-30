@@ -122,6 +122,9 @@
     "soviet:stairs/concrete_yellow_stairs",
     "soviet:slabs/concrete_slab_yellow",
     "soviet:stairs/concrete_white_stairs",
-    "soviet:slabs/concrete_slab_white"
+    "soviet:slabs/concrete_slab_white",
+    "soviet:structural/ceramic_glass_blue",
+    "soviet:structural/ceramic_glass_green",
+    "soviet:structural/ceramic_glass_brown"
   ]
 }
